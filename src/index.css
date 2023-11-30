@@ -1,13 +1,228 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+	font-family: GS-Light;
+	src: url("./assets/fonts/GeneralSans-Light.otf");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+	font-family: GS-Regular;
+	src: url("./assets/fonts/GeneralSans-Regular.otf");
+}
+
+@font-face {
+	font-family: GS-Medium;
+	src: url("./assets/fonts/GeneralSans-Medium.otf");
+}
+
+@font-face {
+	font-family: GS-SemiBold;
+	src: url("./assets/fonts/GeneralSans-Semibold.otf");
+}
+
+@font-face {
+	font-family: GS-Bold;
+	src: url("./assets/fonts/GeneralSans-Bold.otf");
+}
+
+*,
+::before,
+::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border-width: 0;
+	border-style: solid;
+}
+
+::before,
+::after {
+	border-color: transparent !important;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+	tab-size: 4;
+	font-feature-settings: normal;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+}
+
+html._fixed,
+body._fixed {
+	touch-action: none;
+	-webkit-overflow-scrolling: none;
+	overflow: hidden;
+	overscroll-behavior: none;
+}
+
+body {
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	width: 100%;
+	height: 100%;
+	background: #fff !important;
+	color: #1a1a1a;
+	overscroll-behavior-y: none;
+	line-height: inherit;
+	font-family: "Inter", sans-serif;
+}
+
+#root {
+	max-width: 1920px !important;
+	margin: 0 auto;
+	position: relative;
+}
+
+@media (min-width: 1921px) {
+	#root {
+		border-left: 1px solid #212121;
+		border-right: 1px solid #212121;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+dl,
+dd,
+hr,
+figure,
+pre {
+	line-height: 1.4;
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+ul,
+ol,
+li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+	display: block;
+	vertical-align: middle;
+}
+
+img,
+video {
+	max-width: 100%;
+	height: auto;
+}
+
+img {
+	object-fit: cover;
+}
+
+a {
+	outline: none;
+	font-family: inherit;
+	text-decoration: none;
+	color: inherit;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-size: 100%;
+	font-weight: inherit;
+	line-height: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+[type="button"],
+[type="reset"],
+[type="submit"],
+button {
+	-webkit-appearance: button;
+	appearance: button;
+	background-color: transparent;
+	background-image: none;
+}
+
+[role="button"],
+button {
+	cursor: pointer;
+}
+
+button {
+	outline: none !important;
+	font: inherit;
+	color: inherit;
+	border: none !important;
+	font-size: 16px;
+	text-transform: none;
+}
+
+/* Apex Charts */
+.apexcharts-tooltip {
+	background: #7756fe;
+	color: #fff;
+	opacity: 0.8 !important;
+	z-index: 3 !important;
+	min-width: 100px;
+}
+
+.apexcharts-tooltip-y-group {
+	display: flex;
+	flex-direction: column;
+}
+
+.apexcharts-tooltip-y-group span {
+	margin-left: 0px;
+}
+
+.apexcharts-xcrosshairs.apexcharts-active {
+	stroke: #7756fe;
+}
+
+.apexcharts-gridline {
+	stroke: #82808f;
+}
+
+.apexcharts-series-markers circle {
+	fill: #7756fe !important;
+}
+
+.apexcharts-xaxistooltip {
+	display: none;
+}
+
+.apexcharts-xaxis-tick {
+	display: none;
+}
+
+.apexcharts-grid-borders line {
+	stroke-width: 0.5;
 }
