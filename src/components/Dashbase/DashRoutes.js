@@ -22,7 +22,7 @@ const dashRoutes = [
 				icon: DashboardIcon,
 				title: "Dashboard",
 				path: "/",
-				component: () => <Outlet />,
+				component: () => <div>Dashboard</div>,
 			},
 			{
 				icon: WalletIcon,
