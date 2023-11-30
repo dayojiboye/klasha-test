@@ -12,6 +12,7 @@ import LinksIcon from "assets/icons/link-icon.svg";
 import WireIcon from "assets/icons/wire-icon.svg";
 
 // pages
+import Dashboard from "pages/Dashboard";
 
 const dashRoutes = [
 	{
@@ -22,7 +23,7 @@ const dashRoutes = [
 				icon: DashboardIcon,
 				title: "Dashboard",
 				path: "/",
-				component: () => <div>Dashboard</div>,
+				component: Dashboard,
 			},
 			{
 				icon: WalletIcon,

@@ -24,6 +24,10 @@ const StyledMain = styled.main`
 
 	@media (max-width: 1203px) {
 		margin-left: 0px;
+		padding: 72px 32px 64px;
+	}
+
+	@media (max-width: 767px) {
 		padding: 72px 16px 64px;
 	}
 `;

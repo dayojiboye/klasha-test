@@ -63,7 +63,7 @@ export default function Header({ open, onClick }) {
 						width="46px !important"
 						height="24px !important"
 					>
-						EN
+						En
 					</UserPanel>
 					<MenuList zIndex={10} bg="cardBg" borderColor="#EDEDED" />
 				</Menu>

@@ -1,0 +1,57 @@
+import styled from "@emotion/styled";
+import React from "react";
+
+const StyledSalesOverviewCard = styled.div`
+	padding: 25px 24px 24px;
+	border: 1px solid ${(props) => props.theme.colors.black};
+	background-color: ${(props) => props.theme.colors.white};
+	border-radius: 8px;
+	width: 256px;
+	color: ${(props) => props.theme.colors.black};
+	max-width: 256px;
+	min-height: 240px;
+
+	@media (max-width: 567px) {
+		width: 100%;
+		max-width: unset;
+	}
+
+	@media (min-width: 640px) {
+		width: 256px;
+		min-height: unset;
+	}
+
+	&:hover {
+		background-color: ${(props) => props.theme.colors.black};
+		color: ${(props) => props.theme.colors.white};
+	}
+
+	h3,
+	p {
+		font-size: 14px;
+	}
+
+	h4 {
+		margin-top: 8px;
+		font-family: GS-Medium;
+		font-size: 20px;
+	}
+
+	img {
+		height: auto;
+		width: 100%;
+		object-fit: contain;
+		margin: 26px 0px 19px;
+	}
+`;
+
+export default function SalesOverviewCard({ title, graphImgSrc, dateRange, value }) {
+	return (
+		<StyledSalesOverviewCard>
+			{dateRange && <p>{dateRange}</p>}
+			{graphImgSrc && <img alt={title} width={300} height={300} src={graphImgSrc} />}
+			<h3>{title}</h3>
+			<h4>{value}</h4>
+		</StyledSalesOverviewCard>
+	);
+}
