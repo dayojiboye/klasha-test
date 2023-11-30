@@ -85,6 +85,11 @@ const SidebarItem = styled.li`
 				}
 			}
 		}
+
+		svg {
+			width: 24px;
+			height: 24px;
+		}
 	}
 `;
 

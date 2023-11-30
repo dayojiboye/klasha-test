@@ -187,32 +187,36 @@ button {
 
 /* Apex Charts */
 .apexcharts-tooltip {
-	background: #7756fe;
-	color: #fff;
-	opacity: 0.8 !important;
+	background: transparent;
+	color: #0a0a0a;
+	opacity: 1 !important;
 	z-index: 3 !important;
-	min-width: 100px;
+	min-width: fit-content !important;
+	padding: 0px;
+	border-radius: 0px !important;
+	box-shadow: none !important;
 }
 
-.apexcharts-tooltip-y-group {
+/* .apexcharts-tooltip-y-group {
 	display: flex;
 	flex-direction: column;
-}
+} */
 
 .apexcharts-tooltip-y-group span {
 	margin-left: 0px;
 }
 
 .apexcharts-xcrosshairs.apexcharts-active {
-	stroke: #7756fe;
+	stroke: #0a0a0a;
 }
 
 .apexcharts-gridline {
-	stroke: #82808f;
+	stroke: #ededed;
 }
 
 .apexcharts-series-markers circle {
-	fill: #7756fe !important;
+	fill: #0a0a0a !important;
+	display: none;
 }
 
 .apexcharts-xaxistooltip {
@@ -224,5 +228,15 @@ button {
 }
 
 .apexcharts-grid-borders line {
-	stroke-width: 0.5;
+	stroke-width: 1;
+}
+
+.apexcharts-xcrosshairs {
+	stroke-dasharray: 0px !important;
+	stroke: #0a0a0a !important;
+	width: 2px;
+}
+
+.apexcharts-xaxis {
+	transform: translate(0, 10px) !important;
 }

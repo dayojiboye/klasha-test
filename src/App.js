@@ -11,7 +11,7 @@ export default function App() {
 			<BrowserRouter>
 				<Routes>
 					<>
-						<Route path="/" element={<Dashbase />} />
+						{/* <Route path="/" element={<Dashbase />} /> */}
 						<Route path="/*" element={<Dashbase />} />
 					</>
 					<Route path="*" element={<NotFound />} />

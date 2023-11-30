@@ -3,6 +3,8 @@ import SalesOverviewCard from "components/Cards/SalesOverviewCard";
 import React from "react";
 import GraphUpward from "assets/images/graph-upward.png";
 import GraphDownward from "assets/images/graph-downward.png";
+import DashboardFilters from "./DashboardFilters";
+import DashboardGraph from "./DashboardGraph";
 
 const Container = styled.div`
 	width: 100%;
@@ -23,9 +25,45 @@ const Container = styled.div`
 			flex-wrap: unset;
 		}
 	}
+
+	.sales-report {
+		margin-top: 32px;
+		width: 100%;
+		display: flex;
+		gap: 24px;
+
+		.sales-graph {
+			flex: 1;
+
+			.graph-panel {
+				border-radius: 8px;
+				border: 1px solid ${(props) => props.theme.colors.secondary};
+				background-color: ${(props) => props.theme.colors.white};
+				padding: 0px 0px 34px;
+				margin-top: 1px;
+			}
+		}
+
+		.klasha-wire-card {
+			width: 304px;
+		}
+	}
 `;
 
 export default function DashboardContent() {
+	const [filters, setFilters] = React.useState({
+		duration: 7,
+		currency: "USD",
+		channel: "email",
+	});
+
+	const onChangeFilter = (name, value) => {
+		setFilters({
+			...filters,
+			[name]: value,
+		});
+	};
+
 	return (
 		<Container>
 			<h1>Sales overview</h1>
@@ -49,6 +87,47 @@ export default function DashboardContent() {
 					value="₦1,652.50"
 					graphImgSrc={GraphUpward}
 				/>
+			</div>
+			<div className="sales-report">
+				<div className="sales-graph">
+					<DashboardFilters filters={filters} onChangeFilter={onChangeFilter} />
+					<div className="graph-panel">
+						<DashboardGraph
+							series={[
+								{
+									name: "",
+									data: [
+										{
+											x: "20 Aug",
+											y: 2100,
+										},
+										{
+											x: "21 Aug",
+											y: 2000,
+										},
+										{
+											x: "22 Aug",
+											y: 2800,
+										},
+										{
+											x: "23 Aug",
+											y: 2100,
+										},
+										{
+											x: "24 Aug",
+											y: 4000,
+										},
+										{
+											x: "25 Aug",
+											y: 3800,
+										},
+									],
+								},
+							]}
+						/>
+					</div>
+				</div>
+				<div className="klasha-wire-card"></div>
 			</div>
 		</Container>
 	);
