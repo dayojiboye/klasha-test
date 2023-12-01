@@ -23,10 +23,12 @@ const StyledDropdown = styled(MenuButton)`
 	}
 `;
 
-export default function CustomDropdown({ cls, label }) {
+export default function CustomDropdown({ cls, label, icon }) {
+	const Icon = icon || ChevronDown;
+
 	return (
 		<Menu>
-			<StyledDropdown className={cls} as={Button} rightIcon={<ReactSVG src={ChevronDown} />}>
+			<StyledDropdown className={cls} as={Button} rightIcon={<ReactSVG src={Icon} />}>
 				{label}
 			</StyledDropdown>
 			<MenuList zIndex={10} bg="cardBg" borderColor="#EDEDED" />

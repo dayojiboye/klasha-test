@@ -82,7 +82,6 @@ const HamburgerButton = styled.button`
 	min-height: auto;
 	box-shadow: none !important;
 	position: relative;
-	/* z-index: ${({ open }) => (open ? 9 : "unset")}; */
 
 	&:hover {
 		background-color: transparent !important;
@@ -105,12 +104,7 @@ export default function PageLayout() {
 	return (
 		<StyledPageLayout id="page-layout">
 			<Sidebar open={isOpen} />
-			<Header
-				open={isOpen}
-				onClick={() => {
-					setIsOpen(!isOpen);
-				}}
-			/>
+			<Header />
 			<StyledMain>
 				<Outlet />
 			</StyledMain>

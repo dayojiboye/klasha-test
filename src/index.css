@@ -73,12 +73,12 @@ body {
 }
 
 #root {
-	max-width: 1920px !important;
+	max-width: 1680px !important;
 	margin: 0 auto;
 	position: relative;
 }
 
-@media (min-width: 1921px) {
+@media (min-width: 1681px) {
 	#root {
 		border-left: 1px solid #212121;
 		border-right: 1px solid #212121;
@@ -196,11 +196,6 @@ button {
 	border-radius: 0px !important;
 	box-shadow: none !important;
 }
-
-/* .apexcharts-tooltip-y-group {
-	display: flex;
-	flex-direction: column;
-} */
 
 .apexcharts-tooltip-y-group span {
 	margin-left: 0px;

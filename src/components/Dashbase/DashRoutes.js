@@ -13,6 +13,7 @@ import WireIcon from "assets/icons/wire-icon.svg";
 
 // pages
 import Dashboard from "pages/Dashboard";
+import Transactions from "pages/Transactions";
 
 const dashRoutes = [
 	{
@@ -35,7 +36,7 @@ const dashRoutes = [
 				icon: TransactionsIcon,
 				title: "Transactions",
 				path: "/transactions",
-				component: () => <Outlet />,
+				component: Transactions,
 			},
 			{
 				icon: AnalyticsIcon,

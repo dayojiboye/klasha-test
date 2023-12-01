@@ -48,7 +48,7 @@ const UserPanel = styled(MenuButton)`
 	}
 `;
 
-export default function Header({ open, onClick }) {
+export default function Header() {
 	return (
 		<>
 			<StyledHeader>

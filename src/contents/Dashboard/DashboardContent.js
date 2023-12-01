@@ -33,7 +33,6 @@ const Container = styled.div`
 		gap: 24px;
 		display: grid;
 		grid-template-columns: 1fr;
-		/* display: none; */
 
 		@media (min-width: 1024px) {
 			grid-template-columns: 1fr auto;
