@@ -3,6 +3,7 @@ import SalesOverviewCard from "components/Cards/SalesOverviewCard";
 import React from "react";
 import GraphUpward from "assets/images/graph-upward.png";
 import GraphDownward from "assets/images/graph-downward.png";
+import GraphUpward2 from "assets/images/graph-upward-2.png";
 import DashboardFilters from "./DashboardFilters";
 import DashboardGraph from "./DashboardGraph";
 import WireCard from "components/Cards/WireCard";
@@ -28,7 +29,7 @@ const Container = styled.div`
 	}
 
 	.sales-report {
-		margin-top: 32px;
+		margin-top: 46px;
 		width: 100%;
 		gap: 24px;
 		display: grid;
@@ -85,7 +86,7 @@ export default function DashboardContent() {
 					title="Last month"
 					dateRange="24 Aug - 01 Sep 21"
 					value="₦1,652.50"
-					graphImgSrc={GraphUpward}
+					graphImgSrc={GraphUpward2}
 				/>
 			</div>
 			<div className="sales-report">

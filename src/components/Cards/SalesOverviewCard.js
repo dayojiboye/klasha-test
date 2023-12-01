@@ -8,6 +8,8 @@ const StyledSalesOverviewCard = styled.div`
 	border-radius: 8px;
 	color: ${(props) => props.theme.colors.black};
 	min-height: 240px;
+	display: flex;
+	flex-direction: column;
 
 	@media (min-width: 640px) {
 		min-height: unset;
@@ -18,13 +20,23 @@ const StyledSalesOverviewCard = styled.div`
 		color: ${(props) => props.theme.colors.white};
 	}
 
+	&:first-of-type {
+		h3 {
+			margin-top: unset;
+		}
+	}
+
+	h3 {
+		margin-top: auto;
+	}
+
 	h3,
 	p {
 		font-size: 14px;
 	}
 
 	h4 {
-		margin-top: 8px;
+		margin-top: 4px;
 		font-family: GS-Medium;
 		font-size: 20px;
 	}
