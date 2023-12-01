@@ -23,6 +23,9 @@ const StyledHeader = styled.header`
 
 	@media (max-width: 1203px) {
 		margin-left: 0px;
+	}
+
+	@media (max-width: 767px) {
 		padding: 16px;
 	}
 `;

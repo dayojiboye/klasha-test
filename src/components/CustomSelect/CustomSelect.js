@@ -63,7 +63,7 @@ const customStyles = (zIndex = 40) => {
 		dropdownIndicator: (provided, state) => {
 			return {
 				...provided,
-				color: state.isFocused ? "#0A0A0A !important" : "#ccc",
+				color: "#0A0A0A",
 			};
 		},
 

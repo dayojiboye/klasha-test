@@ -9,7 +9,14 @@ import { ReactSVG } from "react-svg";
 const StyledDashboardFilters = styled.div`
 	width: 100%;
 	display: flex;
-	align-items: center;
+	flex-direction: column;
+	gap: 8px;
+
+	@media (min-width: 640px) {
+		flex-direction: row;
+		align-items: center;
+		gap: unset;
+	}
 
 	> h2 {
 		font-size: 20px;
@@ -21,6 +28,11 @@ const StyledDashboardFilters = styled.div`
 		width: 24px;
 		border-color: rgba(0, 0, 0, 0.1);
 		transform: rotate(270deg);
+		display: none;
+
+		@media (min-width: 640px) {
+			display: block;
+		}
 	}
 
 	.duration-filter {
@@ -43,16 +55,31 @@ const StyledDashboardFilters = styled.div`
 	.other-filters {
 		display: flex;
 		gap: 10px;
-		margin-left: 25px;
+		flex-direction: column;
 		flex: 1;
+
+		@media (min-width: 640px) {
+			margin-left: 25px;
+			flex-direction: row;
+		}
 
 		.channel-filter {
 			flex: 1;
+			margin-bottom: 2px;
 			max-width: 283px;
+
+			@media (min-width: 640px) {
+				max-width: unset;
+			}
 		}
 
 		.download-btn {
 			padding: 12px 16px;
+			max-width: 283px;
+
+			@media (min-width: 640px) {
+				max-width: unset;
+			}
 		}
 	}
 `;

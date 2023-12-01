@@ -1,7 +1,7 @@
 import { Button, Menu, MenuButton, MenuList } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import React from "react";
-import ChevronDown from "assets/icons/chevron-down.svg";
+import ChevronDown from "assets/icons/chevron-down-2.svg";
 import { ReactSVG } from "react-svg";
 
 const StyledDropdown = styled(MenuButton)`
@@ -20,11 +20,6 @@ const StyledDropdown = styled(MenuButton)`
 
 	&:hover {
 		background-color: transparent;
-	}
-
-	svg {
-		width: 18px;
-		height: 18px;
 	}
 `;
 

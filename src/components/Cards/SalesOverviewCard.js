@@ -6,18 +6,10 @@ const StyledSalesOverviewCard = styled.div`
 	border: 1px solid ${(props) => props.theme.colors.black};
 	background-color: ${(props) => props.theme.colors.white};
 	border-radius: 8px;
-	width: 256px;
 	color: ${(props) => props.theme.colors.black};
-	max-width: 256px;
 	min-height: 240px;
 
-	@media (max-width: 567px) {
-		width: 100%;
-		max-width: unset;
-	}
-
 	@media (min-width: 640px) {
-		width: 256px;
 		min-height: unset;
 	}
 

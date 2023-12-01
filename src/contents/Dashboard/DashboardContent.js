@@ -5,6 +5,7 @@ import GraphUpward from "assets/images/graph-upward.png";
 import GraphDownward from "assets/images/graph-downward.png";
 import DashboardFilters from "./DashboardFilters";
 import DashboardGraph from "./DashboardGraph";
+import WireCard from "components/Cards/WireCard";
 
 const Container = styled.div`
 	width: 100%;
@@ -16,36 +17,36 @@ const Container = styled.div`
 	}
 
 	.sales-overview {
-		display: flex;
 		margin-top: 24px;
 		gap: 24px;
-		flex-wrap: wrap;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
 
 		@media (min-width: 1024px) {
-			flex-wrap: unset;
+			grid-template-columns: repeat(4, 1fr);
 		}
 	}
 
 	.sales-report {
 		margin-top: 32px;
 		width: 100%;
-		display: flex;
 		gap: 24px;
+		display: grid;
+		grid-template-columns: 1fr;
+		/* display: none; */
+
+		@media (min-width: 1024px) {
+			grid-template-columns: 1fr auto;
+		}
 
 		.sales-graph {
-			flex: 1;
-
 			.graph-panel {
 				border-radius: 8px;
 				border: 1px solid ${(props) => props.theme.colors.secondary};
 				background-color: ${(props) => props.theme.colors.white};
 				padding: 0px 0px 34px;
-				margin-top: 1px;
+				margin-top: 2px;
 			}
-		}
-
-		.klasha-wire-card {
-			width: 304px;
 		}
 	}
 `;
@@ -99,7 +100,7 @@ export default function DashboardContent() {
 									data: [
 										{
 											x: "20 Aug",
-											y: 2100,
+											y: 3000,
 										},
 										{
 											x: "21 Aug",
@@ -107,11 +108,11 @@ export default function DashboardContent() {
 										},
 										{
 											x: "22 Aug",
-											y: 2800,
+											y: 3000,
 										},
 										{
 											x: "23 Aug",
-											y: 2100,
+											y: 2000,
 										},
 										{
 											x: "24 Aug",
@@ -119,7 +120,7 @@ export default function DashboardContent() {
 										},
 										{
 											x: "25 Aug",
-											y: 3800,
+											y: 3000,
 										},
 									],
 								},
@@ -127,7 +128,7 @@ export default function DashboardContent() {
 						/>
 					</div>
 				</div>
-				<div className="klasha-wire-card"></div>
+				<WireCard />
 			</div>
 		</Container>
 	);

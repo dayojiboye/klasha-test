@@ -57,6 +57,19 @@ const theme = extendTheme({
 						bg: "transparent !important",
 					},
 				},
+				secondary: {
+					bg: "secondary",
+					padding: "14px 24px",
+					color: "white",
+					fontWeight: "600",
+					borderRadius: "8px",
+					fontSize: "14px",
+					height: "48px",
+
+					"&:hover": {
+						bg: "secondary !important",
+					},
+				},
 			},
 			defaultProps: {
 				size: null,

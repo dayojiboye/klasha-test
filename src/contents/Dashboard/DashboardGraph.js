@@ -126,7 +126,7 @@ export default function DashboardGraph({ series = [] }) {
 			options={chartConfig.options}
 			series={series}
 			type="area"
-			height="284"
+			height="250"
 			// width="1000"
 		/>
 	);
